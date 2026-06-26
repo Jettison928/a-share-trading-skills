@@ -35,6 +35,7 @@ A 股交易信息密度很高，真正耗时间的往往不是看一条新闻，
 | 技术指标层 | K 线、均线、MACD、KDJ、RSI、BOLL、CCI | `ashareskill` |
 | 金融搜索层 | 股票、基金、指数、宏观、外汇、大宗商品查询 | `neodata-financial-search` |
 | 短线决策层 | 1-5 日短线信号、强势股扫描、预测记录 | `a-share-short-decision` |
+| 交易视角层 | 缠论、情绪流、龙头战法、预期差的决策审查 | `a-share-trading-perspectives` |
 | 量化辅助层 | 通达信/同花顺公式、选股逻辑、简单回测 | `quant-helper` |
 
 ## 技能清单
@@ -174,6 +175,25 @@ A 股交易信息密度很高，真正耗时间的往往不是看一条新闻，
 对昨天的短线预测做个复盘。
 ```
 
+### `a-share-trading-perspectives` - A 股交易视角整合
+
+适合把实时数据和交易想法放进不同交易框架里做决策审查。
+
+主要能力：
+
+- 按需调用 49 课缠论、炒股养家情绪流、赵老哥龙头打板、冯柳预期差视角。
+- 区分短线打板、1-5 日动量、技术结构和 3-6 个月预期差交易。
+- 输出介入条件、失效条件、仓位边界和复盘触发点。
+- 与实时行情、热点、资金、短线信号、量化公式技能配合使用。
+
+适合这样问：
+
+```text
+用缠论和情绪周期一起审一下这只票。
+这个打板机会按赵老哥视角能不能做？
+用冯柳预期差框架看一下这笔中线逻辑。
+```
+
 ### `quant-helper` - 量化公式与回测辅助
 
 适合把交易想法转成公式、指标或简单回测逻辑。
@@ -212,21 +232,22 @@ A 股交易信息密度很高，真正耗时间的往往不是看一条新闻，
 
 1. 用 `a-stock-hot` 整理主线、涨停和情绪。
 2. 用 `ashareskill` 拉 K 线和技术指标。
-3. 用 `quant-helper` 把观察到的规律固化成公式或策略。
-4. 用 `a-share-short-decision` 做次日候选和预测记录。
+3. 用 `a-share-trading-perspectives` 做交易视角审查。
+4. 用 `quant-helper` 把观察到的规律固化成公式或策略。
+5. 用 `a-share-short-decision` 做次日候选和预测记录。
 
 ## 安装方式
 
 ### 一次安装全部技能
 
 ```bash
-python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo Jettison928/a-share-trading-skills --path skills/a-stock-news skills/a-stock-hot skills/a-stock-analysis skills/a-stock-data skills/ashareskill skills/neodata-financial-search skills/a-share-short-decision skills/quant-helper
+python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo Jettison928/a-share-trading-skills --path skills/a-stock-news skills/a-stock-hot skills/a-stock-analysis skills/a-stock-data skills/ashareskill skills/neodata-financial-search skills/a-share-short-decision skills/a-share-trading-perspectives skills/quant-helper
 ```
 
 Windows PowerShell 示例：
 
 ```powershell
-python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" --repo Jettison928/a-share-trading-skills --path skills/a-stock-news skills/a-stock-hot skills/a-stock-analysis skills/a-stock-data skills/ashareskill skills/neodata-financial-search skills/a-share-short-decision skills/quant-helper
+python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" --repo Jettison928/a-share-trading-skills --path skills/a-stock-news skills/a-stock-hot skills/a-stock-analysis skills/a-stock-data skills/ashareskill skills/neodata-financial-search skills/a-share-short-decision skills/a-share-trading-perspectives skills/quant-helper
 ```
 
 安装完成后，重启 Codex 才会加载新技能。
@@ -249,6 +270,7 @@ skills/a-stock-data
 skills/ashareskill
 skills/neodata-financial-search
 skills/a-share-short-decision
+skills/a-share-trading-perspectives
 skills/quant-helper
 ```
 
@@ -265,6 +287,7 @@ a-share-trading-skills/
     ├── ashareskill/
     ├── neodata-financial-search/
     ├── a-share-short-decision/
+    ├── a-share-trading-perspectives/
     └── quant-helper/
 ```
 

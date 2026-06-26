@@ -1,0 +1,4 @@
+interface:
+  display_name: "A股交易视角"
+  short_description: "整合缠论、情绪流、龙头战法与预期差视角"
+  default_prompt: "Use $a-share-trading-perspectives to review an A-share trade idea from multiple trading perspectives."

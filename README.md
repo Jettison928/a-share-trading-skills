@@ -333,6 +333,15 @@ a-share-trading-skills/
 
 为了适合公开发布，本仓库只保留技能源码、说明文件、脚本和必要资源。已排除本机运行日志、缓存、用户元数据、Python 编译缓存和临时凭证文件。
 
+## 本机技能备份
+
+除原有 A 股技能外，本仓库同步备份了 24 个已确认 MIT 许可证的技能定义：
+
+- `skills/wps-*`：WPS 文字、表格、演示和跨应用协作。
+- `skills/investment-*`、`skills/earnings-*` 等：AI Berkshire 投资研究工作流。
+
+对应许可证保存在 `licenses/`。其余安装在本机但没有在当前目录中确认可再发布许可证的技能、插件和项目内工作流，记录在 [catalog/installed-skills-manifest.md](catalog/installed-skills-manifest.md) 中，并保留其原始来源，不直接复制到公开仓库。
+
 ## 风险提示
 
 本项目仅用于信息整理、学习研究和 AI 助手能力扩展，不构成任何投资建议。A 股市场波动较大，任何交易决策都应结合个人风险承受能力、资金管理和独立判断。
